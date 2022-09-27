@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: air-ticket-booking-service
+
+server:
+  port: 1111
+
+eureka:
+  client:
+    register-with-eureka: true
