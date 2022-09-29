@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: car-service
+  config:
+    import: optional:file:.env[.properties]
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${DATABASE_NAME}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+    driverClassName: org.postgresql.Driver
+
+server:
+  port: 2222
