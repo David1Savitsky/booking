@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gateway
+zuul:
+  routes:
+    cars-service:
+      path: /car-service/**
+      service-id: car-service
+      strip-prefix: true
+    air-ticket-service:
+      path: /air-ticket-service/**
+      service-id: air-ticket-service
+      strip-prefix: true
+server:
+  port: 8081
