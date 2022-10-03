@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: air-ticket-service
   config:
     import: optional:file:app.env[.properties]
   jpa:
@@ -16,13 +14,3 @@ spring:
 
 server:
   port: 1111
-
-
-#  cloud:
-#    gateway:
-#      discovery:
-#        locator:
-#          enabled: true
-#    config:
-#      uri: http://localhost:8080
-#      fail-fast: true

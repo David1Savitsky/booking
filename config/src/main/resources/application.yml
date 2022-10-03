@@ -1,8 +1,6 @@
 spring:
   application:
     name: config-service
-  config:
-    import: optional:file:.env[.properties]
   cloud:
     config:
       server:
@@ -10,24 +8,6 @@ spring:
           search-locations: classpath:/shared
   profiles:
     active: native
-  jpa:
-    database: POSTGRESQL
-    show-sql: true
-    hibernate:
-      ddl-auto: create-drop
-  datasource:
-    url: jdbc:postgresql://localhost:5432/${DATABASE_NAME}
-    username: ${DATABASE_USERNAME}
-    password: ${DATABASE_PASSWORD}
-    driverClassName: org.postgresql.Driver
-  security:
-    user:
-      name: ${USER_NAME}
-      password: ${USER_PASSWORD}
 
 server:
   port: 8888
-
-eureka:
-  client:
-    register-with-eureka: true

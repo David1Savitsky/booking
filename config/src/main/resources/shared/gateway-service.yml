@@ -1,15 +1,18 @@
-spring:
-  application:
-    name: gateway
 zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
   routes:
     cars-service:
-      path: /car-service/**
-      service-id: car-service
+      path: /car-service.yml/**
+      service-id: car-service.yml
       strip-prefix: true
     air-ticket-service:
       path: /air-ticket-service/**
       service-id: air-ticket-service
       strip-prefix: true
+
 server:
   port: 8081

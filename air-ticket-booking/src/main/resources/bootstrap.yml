@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: air-ticket-service
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        service-id: config-service
+
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#    config:
+#      uri: http://localhost:8080
+#      fail-fast: true
